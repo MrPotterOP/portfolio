@@ -1,0 +1,146 @@
+.section-nav-hero {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+nav {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h1 {
+    font-size: var(--fs-p-md);
+    line-height: 101%;
+}
+.nav-left-container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+.nav-left-container img{
+    width: 34px;
+    height: 34px;
+}
+.nav-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 5px;
+}
+.nav-cta p {
+    font-size: var(--fs-p-sm);
+    font-weight: var(--fw-md);
+}
+
+.nav-cta p:hover {
+    font-weight: var(--fw-sbd);
+    cursor: pointer;
+}
+
+.nav-cta img {
+    width: 16px;
+    height: 16px;
+}
+
+/*              Hero */
+.hero-container img[alt="down-arrow"] {
+    display: none;
+}
+.hero-container {
+    padding: 0 10px;
+    display: grid;
+    row-gap: 10px;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "name name"
+    "web cat"
+    "developer developer"
+    "para para"
+    ;
+    align-items: center;
+    place-items: center;
+    text-align: center;
+}
+
+.hero-container h1 {
+    grid-area: name;
+}
+.hero-container h2 {
+    grid-area: web;
+}
+.hero-container p {
+    grid-area: para;
+}
+.hero-container img:first-child {
+    grid-area: cat;
+    width: 140px;
+}
+.hero-container h1:last-child {
+    grid-area: developer;
+}
+
+
+@media (min-width: 62em) {
+    nav {
+        padding: 20px 30px;
+    }
+    nav h1 {
+        font-size: var(--fs-p-sm);
+    }
+    .nav-left-container {
+        column-gap: 80px;
+    }
+    .nav-left-container img{
+        width: 71px;
+        height: 71px;
+    }
+    .nav-cta {
+        column-gap: 20px;
+    }
+    .nav-cta p {
+        font-size: var(--fs-p-xsm);
+        font-weight: var(--fw-sbd);
+    }
+    .nav-cta img {
+        width: 24px;
+        height: 24px;
+    }
+
+    /*                  Hero  */
+    .hero-container img[alt="down-arrow"] {
+        display: block;
+        grid-area: down;
+        width: 250px;
+    }
+    .hero-container {
+        text-align: left;
+        place-items: unset;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        "name name cat cat"
+        "web web para para"
+        "down developer developer developer"
+        ;
+        column-gap: 20px;
+        row-gap: 0;
+    }
+    .hero-container h1 {
+        line-height: 104%;
+    }
+    .hero-container img:first-child {
+        grid-area: cat;
+        width: 250px;
+        place-self: center;
+    }
+    .hero-container p {
+        align-self: center;
+    }
+
+    
+
+
+}
