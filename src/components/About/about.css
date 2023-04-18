@@ -1,0 +1,111 @@
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+.section-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 15px;
+}
+.about-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 10px;
+}
+.about-top h3 {
+    font-size: var(--fs-h-xsm);
+    font-weight: var(--fw-md);
+    text-align: center;
+}
+.about-top hr {
+    border: 2px solid var(--clr-black);
+}
+.about-top hr {
+    margin-top: 5px;
+}
+
+.about-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 40px;
+}
+.about-middle-context {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 40px;
+}
+.about-middle-context h4 {
+    font-size: var(--fs-h-xsm);
+    font-weight: var(--fw-md);
+}
+.about-middle-context p {
+    font-size: var(--fs-p-xl);
+}
+
+.about-bottom {
+    padding: 10px 0;
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 1rem;
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+}
+  
+.marquee-flex {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 14px;
+    align-items: center;
+    min-width: 100%;
+    gap: 1rem;
+    animation: scroll 10s linear infinite; 
+}
+
+.marquee-flex p {
+    font-size: var(--fs-p-xl);
+}
+
+.marquee-flex img {
+    width: 18;
+}
+
+@media (min-width: 62em){
+    .section-about{
+        row-gap: 60px;
+    }
+    .about-top{
+        row-gap: 40px;
+    }
+    .about-top h3 {
+        font-size: var(--fs-h-md);
+    }
+
+    .about-middle {
+        flex-direction: row;
+        padding: 0 90px;
+        column-gap: 106px;
+    }
+    .about-middle img {
+        width: 816px;
+        height: 520px;
+    }
+    .about-middle h4 {
+        font-size: var(--fs-h-xsm);
+    }
+    .about-middle p {
+        font-size: var(--fs-p-xsm);
+    }
+}

@@ -1,0 +1,31 @@
+.section-skills {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+.skills-top {
+    text-align: end;
+}
+.skills-bottom {
+    padding: 85px 0 45px 0;
+    background-color: var(--clr-black);
+}
+
+.skills-bottom .about-bottom .marquee-flex {
+    margin: 0 0 40px 0;
+    column-gap: 35px;
+}
+.skills-bottom .about-bottom .marquee-flex p {
+    font-size: var(--fs-h-xsm);
+}
+
+@media (min-width: 62em){
+    .section-skills{
+        row-gap: 106px;
+    }
+    .section-skills .skills-top {
+        flex-direction: row-reverse;
+        text-align: left;
+    }
+}
+
