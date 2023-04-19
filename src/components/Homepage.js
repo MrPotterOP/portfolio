@@ -6,6 +6,7 @@ import Navbar from "./Navbar/Navbar";
 import About from "./About/About";
 import Skills from "./Skills/Skills";
 import Experience from "./Experience/Experience";
+import Footer from "./Footer/Footer";
 
 
 
@@ -16,6 +17,7 @@ const Homepage = ()=>{
             <About />
             <Skills />
             <Experience />
+            <Footer />
         </section>
     )
 }
