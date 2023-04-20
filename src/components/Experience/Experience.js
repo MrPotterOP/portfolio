@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import "./experience.css";
 
@@ -7,17 +8,24 @@ const Experience = ()=>{
     return(
         <section className="section-exp">
             <div className="exp-top">
-            
-            <div className="about-middle">
+            <motion.div 
+            initial={{translateX: "-150px", opacity: 0}}
+            whileInView={{translateX: 0, opacity: 1}}
+            viewport={{ once: true }}
+            className="about-middle">
                 <img src="/images/workexp.gif" alt="meme-art"></img>
                 <div className="about-middle-context">
                 <h4>Work Experience</h4>
                 <p>Completed one internship as a full stack developer intern at Photograde.Ai, and few personal projects.</p>
                 </div>
-            </div>
+            </motion.div>
 
             </div>
-            <div className="exp-middle">
+            <motion.div 
+            initial={{translateX: "-150px", opacity: 0}}
+            whileInView={{translateX: 0, opacity: 1}}
+            viewport={{ once: true }}
+            className="exp-middle">
                 
                 <div className="about-middle">
                     <img src="/images/exp.png" alt="meme-art"></img>
@@ -31,9 +39,13 @@ const Experience = ()=>{
                     </div>
                 </div>
 
-            </div>
+            </motion.div>
 
-            <div className="exp-bottom">
+            <motion.div 
+            initial={{translateX: "-150px", opacity: 0}}
+            whileInView={{translateX: 0, opacity: 1}}
+            viewport={{ once: true }}
+            className="exp-bottom">
                 <div className="exp-projects">
                     <div className="project">
                         <h1>Share Pro</h1>
@@ -44,7 +56,7 @@ const Experience = ()=>{
                         <img src="/images/link.png" alt="link"></img>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }

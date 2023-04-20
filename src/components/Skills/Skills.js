@@ -1,19 +1,28 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import "./skills.css";
 
 const Skills = ()=>{
     return(
         <section className="section-skills">
-            <div className="about-middle skills-top">
+            <motion.div 
+            initial={{translateX: "-150px", opacity: 0}}
+            whileInView={{translateX: 0, opacity: 1}}
+            viewport={{ once: true }}
+            className="about-middle skills-top">
                 <img src="/images/skills.jpeg" alt="meme-art"></img>
                 <div className="about-middle-context">
                 <h4>My Skills</h4>
                 <p>i’ve categorised and arranged my skills below as front-end, back-end and others respectively.</p>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="skills-bottom">
+            <motion.div 
+            initial={{translateX: "-150px", opacity: 0}}
+            whileInView={{translateX: 0, opacity: 1}}
+            viewport={{ once: true }}
+            className="skills-bottom">
 
                 <div className="about-bottom">
                     <div className="marquee-flex">
@@ -21,12 +30,14 @@ const Skills = ()=>{
                         <p>CSS</p>
                         <p>ReactJS</p>
                         <p>Figma</p>
+                        <p>FramerMotion</p>
                     </div>
                     <div className="marquee-flex" aria-hidden="true">
                         <p>HTML</p>
                         <p>CSS</p>
                         <p>ReactJS</p>
                         <p>Figma</p>
+                        <p>FramerMotion</p>
                         </div>
                 </div>
 
@@ -67,7 +78,7 @@ const Skills = ()=>{
                 <p>MailSendingAPI's </p>
                 </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import "./footer.css";
@@ -6,7 +7,11 @@ import "./footer.css";
 
 const Footer = ()=>{
     return(
-        <section className="section-footer">
+        <motion.section 
+        initial={{translateX: "-150px", opacity: 0}}
+            whileInView={{translateX: 0, opacity: 1}}
+            viewport={{ once: true }}
+        className="section-footer">
             <div className="footer">
                 <div className="footer-top">
                     <h1>Feel Free
@@ -29,7 +34,7 @@ const Footer = ()=>{
                     <p>© SHUBHAM UBARHANDE</p>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 
