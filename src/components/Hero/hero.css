@@ -40,7 +40,14 @@
     font-weight: var(--fw-lt);
     font-size: var(--fs-p-sm);
 }
-
+.work-bkg-black {
+    background-color: var(--clr-black);
+    padding-top: 40px;
+    height: 80px;
+}
+.hero-gap {
+    height: 260px;
+}
 
 @media (min-width: 62em){
     .hero-flex {
@@ -61,5 +68,12 @@
     }
     .hero-flex-context h1 {
         font-size: var(--fs-h-xsm);
+    }
+    .work-bkg-black {
+        height: 760px;
+        padding: 60px 40px 0 40px;
+    }
+    .work-bkg-black img {
+        display: inline-block;
     }
 }

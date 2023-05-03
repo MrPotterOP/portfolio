@@ -1,0 +1,36 @@
+[{
+    "id": 0,
+    "title": "Portfolio",
+    "catagory": "website",
+    "decription": "As a full-stack web developer i do create and maintain websites and web applications using my primary development stack MERN. as well as i do troubleshoot issues and ensure that websites are user-friendly and visually appealing",
+    "dependancies": "HTML/CSS, REACT",
+    "date": {
+        "month": "april",
+        "year": 2023
+    },
+    "links": ["https://google.com/", "/bcdf"]
+}, {
+    "id": 1,
+    "title": "Sharepro",
+    "catagory": "website",
+    "decription": "Lorem ipsum as dot Lorem ipsum as dot Lorem ipsum as dot Lorem ipsum as dot Lorem ipsum as dot Lorem ipsum as dot Lorem ipsum as dot Lorem ipsum as dot Lorem ipsum as dot",
+    "dependancies": "HTML/CSS, REACT",
+    "date": {
+        "month": "june",
+        "year": 2022
+    },
+    "links": ["/abcd", "/bcdf"]
+}, 
+    {
+        "id": 2,
+        "title": "Ninjastore",
+        "catagory": "website",
+        "decription": "Lorem ipsum as dotLorem ipsum as dotLorem ipsum as dotLorem ipsum as dotLorem ipsum as dotLorem ipsum as dotLorem ipsum as dotLorem ipsum as dot",
+        "dependancies": "HTML/CSS, REACT",
+        "date": {
+            "month": "december",
+            "year": 2021
+        },
+        "links": ["/abcd", "/bcdf"]
+    }
+]

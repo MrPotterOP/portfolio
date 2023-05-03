@@ -1,17 +1,30 @@
 import React,{useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
+import { useSearchParams } from "react-router-dom";
 import Hero from "../components/Hero/Hero";
+import Details from "../components/Details/Details";
+import Footer from "../components/Footer/Footer";
+
+import work from "../data/Work.json";
 
 
 
 const Work = ()=>{
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false); 
+    const [searchParams] = useSearchParams();
+    
+    let id = (parseInt(searchParams.get('id')) > work.length) ? 0 : parseInt(searchParams.get('id')) - 1;
+
+    if(!id){
+        id = 0
+    }else if(id<0){
+        id = 0
+    }
 
 
     const html = document.querySelector('html');
     html.style.overflow = isOpen ? "hidden" : "auto";
-
     const NavMenu = ()=>{
 
         const links = ["Home", "About", "Work", "Contact"];
@@ -26,6 +39,7 @@ const Work = ()=>{
                     links.map((i, t) => {
                         return (
                             <motion.a
+                            key={t}
                             initial={{translateY: "-100px", opacity: 0}}
                             animate={{translateY: 0, opacity: 1}}
                             transition={{delay: .3 + Math.floor(t/2), duration: .1}}
@@ -63,14 +77,22 @@ const Work = ()=>{
     }
 
     return (
-        <section className="section-work">
+        <>
+         <section className="section-work">
             <Navbar />
             <AnimatePresence>
             {isOpen ? <NavMenu /> : null}
             </AnimatePresence>
 
-            <Hero />
+            <Hero id={id} catagory={work[id].catagory} date={work[id].date} title={work[id].title}/>
+            <div className="work-bkg-black">
+                <img src={`/images/mac-${id}.png`} alt="macbook-pro-mockup"></img>
+            </div>
+            <div className="hero-gap"></div>
+            <Details description={work[id].decription} dependancies={work[id].dependancies} links={work[id].links} id={id}/>
+            <Footer />
         </section>
+        </>
     )
 }
 
