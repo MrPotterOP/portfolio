@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import "./footer.css";
 
@@ -18,17 +19,19 @@ const Footer = ()=>{
                     <br />
                      to Talk</h1>
 
-                    <div className="footer-circle">
-                        <p>Let’s Talk</p>
-                    </div>
+                    <Link to="/contact">
+                        <div className="footer-circle">
+                            <p>Let’s Talk</p>
+                        </div>
+                    </Link>
                 </div>
 
                 <div className="footer-middle">
                     <div className="footer-nav">
-                    <Link to="#">Home</Link>
-                    <Link to="#">About</Link>
-                    <Link to="#">Work</Link>
-                    <Link to="#">Contact</Link>
+                    <HashLink to="/#top">Home</HashLink>
+                    <HashLink to="/#about">About</HashLink>
+                    <HashLink to="/#exp">Work</HashLink>
+                    <Link to="/contact">Contact</Link>
                     </div>
 
                     <p>© SHUBHAM UBARHANDE</p>

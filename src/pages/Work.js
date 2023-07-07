@@ -1,6 +1,8 @@
 import React,{useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
 import { useSearchParams } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+import { useNavigate } from "react-router-dom";
 import Hero from "../components/Hero/Hero";
 import Details from "../components/Details/Details";
 import Footer from "../components/Footer/Footer";
@@ -13,8 +15,9 @@ const Work = ()=>{
 
     const [isOpen, setIsOpen] = useState(false); 
     const [searchParams] = useSearchParams();
+    const navigate = useNavigate();
     
-    let id = (parseInt(searchParams.get('id')) > work.length) ? 0 : parseInt(searchParams.get('id')) - 1;
+    let id = (parseInt(searchParams.get('id')) >= work.length) ? 0 : parseInt(searchParams.get('id'));
 
     if(!id){
         id = 0
@@ -27,28 +30,17 @@ const Work = ()=>{
     html.style.overflow = isOpen ? "hidden" : "auto";
     const NavMenu = ()=>{
 
-        const links = ["Home", "About", "Work", "Contact"];
         return(
-            <motion.div className="nav-menu" 
+            <motion.div className="nav-menu"
             initial={{opacity: 0.3, translateX: "-100%"}}
             animate={{opacity: 1, translateX: 0}}
             exit={{opacity: 0, translateX: "100%"}}
             transition={{duration: .3}}
             >
-                {
-                    links.map((i, t) => {
-                        return (
-                            <motion.a
-                            key={t}
-                            initial={{translateY: "-100px", opacity: 0}}
-                            animate={{translateY: 0, opacity: 1}}
-                            transition={{delay: .3 + Math.floor(t/2), duration: .1}}
-                            >
-                                {i}
-                            </motion.a>
-                        )
-                    })
-                }
+                <HashLink to="/#top">Home</HashLink>
+                <HashLink to="/#about">About</HashLink>
+                <HashLink to="/#exp">Work</HashLink>
+                <HashLink to="/contact">Contact</HashLink>
             </motion.div>
         )
     }
@@ -61,11 +53,13 @@ const Work = ()=>{
 
 
         return(
-                    <nav>
-                        <h1>shubham <br></br> ubarhande</h1>
+                    <nav id="navbar">
+                        <HashLink to="/#top">
+                            <h1>shubham <br></br> ubarhande</h1>
+                        </HashLink>
 
                         <div className="nav-left-container">
-                            <div className="nav-cta">
+                            <div className="nav-cta" onClick={()=> navigate("/contact")}>
                                 <p>Talk to me</p>
                                 <img src="/images/link.png" alt="link"></img>
                             </div>

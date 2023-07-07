@@ -7,8 +7,6 @@ import "./details.css";
 
 const Details = ({description, dependancies, links, id})=>{
 
-    let isWeb = (window.innerWidth <= 990) ? "mob" : "desk";
-
     return(
         <section className="section-details">
             <div className="details-flex">
@@ -26,20 +24,20 @@ const Details = ({description, dependancies, links, id})=>{
                     <h2>Links</h2>
 
                     <div className="details-cell-links">
-                        <Link onClick={()=> window.open(links[0])}>View Code</Link>
-                        <Link onClick={()=> window.open(links[1])}>Visit Site</Link>
+                        <Link to={links[0]} target="_blank">Visit Site</Link>
+                        <Link to={links[1]} target="_blank">View Code</Link>
                     </div>
                 </div>
                 <div className="details-cell-vertical">
                     <h2>SCREENSHOTS</h2>
 
-                    <img src={`/images/sc-${isWeb}-${id}.png`} alt="web-screenshot"></img>
+                    <img src={`/images/sc-desk-${id}.png`} alt="web-screenshot"></img>
                 </div>
 
-                {/* <div className="details-cell-horizontal">
+                <div className="details-cell-horizontal">
                     <Link to={`/`}><img src="/images/prev.png" alt="back-arrow"></img> Home</Link>
-                    <Link to={`/work?id=${id + 2}`}> Next Project<img src="/images/next.png" alt="next-arrow"></img></Link>
-                </div> */}
+                    <Link to={`/work?id=${id + 1}`} onClick={()=> window.scrollTo(0)}> Next Project<img src="/images/next.png" alt="next-arrow"></img></Link>
+                </div>
             </div>
         </section>
     )

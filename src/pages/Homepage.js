@@ -12,7 +12,7 @@ import Footer from "../components/Footer/Footer";
 
 const Homepage = ()=>{
     return(
-        <section className="section-homepage">
+        <section className="section-homepage" id="top">
             <Navbar />
             <About />
             <Skills />

@@ -2,35 +2,35 @@
     "id": 0,
     "title": "Portfolio",
     "catagory": "website",
-    "decription": "As a full-stack web developer i do create and maintain websites and web applications using my primary development stack MERN. as well as i do troubleshoot issues and ensure that websites are user-friendly and visually appealing",
+    "decription": "My portfolio website showcases the perfect marriage of aesthetics and technology. With its beautiful design, seamless interactivity, and the power of ReactJS and Framer Motion, it encapsulates my skills and creativity in a visually stunning and engaging way.",
     "dependancies": "HTML/CSS, REACT",
     "date": {
         "month": "april",
         "year": 2023
     },
-    "links": ["https://google.com/", "/bcdf"]
+    "links": ["https://mrpotter.netlify.app/", "https://github.com/MrPotterOP/portfolio"]
 }, {
     "id": 1,
     "title": "Sharepro",
     "catagory": "website",
-    "decription": "Lorem ipsum as dot Lorem ipsum as dot Lorem ipsum as dot Lorem ipsum as dot Lorem ipsum as dot Lorem ipsum as dot Lorem ipsum as dot Lorem ipsum as dot Lorem ipsum as dot",
-    "dependancies": "HTML/CSS, REACT",
+    "decription": "SharePro is a photo/images sharing platform where you can share photo/images throught the internet securely.",
+    "dependancies": "HTML/CSS, REACT, NODEJS, MONGODB, BCRYPTJS, CLOUDINARY",
     "date": {
         "month": "june",
         "year": 2022
     },
-    "links": ["/abcd", "/bcdf"]
+    "links": ["https://share-pro.netlify.app/", "https://github.com/MrPotterOP/sharepro"]
 }, 
     {
         "id": 2,
         "title": "Ninjastore",
         "catagory": "website",
-        "decription": "Lorem ipsum as dotLorem ipsum as dotLorem ipsum as dotLorem ipsum as dotLorem ipsum as dotLorem ipsum as dotLorem ipsum as dotLorem ipsum as dot",
-        "dependancies": "HTML/CSS, REACT",
+        "decription": "NinjaStore is the ultimate destination for gamers to explore and purchase their favorite gaming merchandise. With our MERN stack-powered website",
+        "dependancies": "HTML/CSS, REACT, NODEJS, MONGODB",
         "date": {
             "month": "december",
             "year": 2021
         },
-        "links": ["/abcd", "/bcdf"]
+        "links": ["https://ninjastore.netlify.app/", "https://github.com/MrPotterOP/ninja-store-frontend"]
     }
 ]

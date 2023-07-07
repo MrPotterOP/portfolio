@@ -1,0 +1,88 @@
+.section-contact-form {
+    display: grid;
+    place-content: center;
+    padding: 3rem 1rem;
+}
+.contact-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.contact-form img {
+    display: none;
+}
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.contact-right h1 {
+    font-weight: var(--fw-lt);
+}
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.details-tab p:first-child {
+    font-weight: var(--fw-sbd);
+}
+.conatact-form-conatiner form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.conatact-form-conatiner form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 18px;
+}
+.conatact-form-conatiner form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--clr-black);
+    font-size: 20px;
+    font-weight: var(--fw-lt);
+}
+.conatact-form-conatiner form input:focus-visible {
+    border-bottom: 2px solid var(--clr-black);
+    outline: none;
+}
+.conatact-form-conatiner form button {
+    padding: 14px 8px;
+    font-size: var(--fs-p-xl);
+    background-color: var(--clr-black);
+    border: none;
+    border-radius: 120px;
+    color: var(--clr-white);
+}
+.conatact-form-conatiner form button:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+@media (min-width: 62em){
+
+    .contact-form img {
+        display: block;
+        width: 688px;
+    }
+    .contact-right {
+        padding:  0 1rem;
+    }
+    .contact-right h1 {
+        font-size: var(--fs-p-xl);
+    }
+    .conatact-form-conatiner form button {
+        cursor: pointer;
+        padding: 12px 8px;
+        font-size: 14px;
+        background-color: var(--clr-black);
+        border: none;
+        border-radius: 120px;
+        color: var(--clr-white);
+    }
+
+}

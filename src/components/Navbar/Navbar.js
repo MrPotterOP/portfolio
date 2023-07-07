@@ -2,12 +2,16 @@ import React,{useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
 
 import "./navbar.css";
+import { HashLink } from "react-router-hash-link";
+import { useNavigate } from "react-router-dom";
 
 
 
 const Navbar = ()=>{
 
     const [isOpen, setIsOpen] = useState(false);
+
+    const navigate = useNavigate();
 
     const html = document.querySelector('html');
     html.style.overflow = isOpen ? "hidden" : "auto";
@@ -20,7 +24,7 @@ const Navbar = ()=>{
     }
     const NavMenu = ()=>{
 
-        const links = ["Home", "About", "Work", "Contact"];
+        
         return(
             <motion.div className="nav-menu" 
             initial={{opacity: 0.3, translateX: "-100%"}}
@@ -28,19 +32,11 @@ const Navbar = ()=>{
             exit={{opacity: 0, translateX: "100%"}}
             transition={{duration: .3}}
             >
-                {
-                    links.map((i, t) => {
-                        return (
-                            <motion.a
-                            initial={{translateY: "-100px", opacity: 0}}
-                            animate={{translateY: 0, opacity: 1}}
-                            transition={{delay: .3 + Math.floor(t/2), duration: .1}}
-                            >
-                                {i}
-                            </motion.a>
-                        )
-                    })
-                }
+                <HashLink to="/#top" onClick={handleClick}>Home</HashLink>
+                <HashLink to="/#about" onClick={handleClick}>About</HashLink>
+                <HashLink to="/#exp" onClick={handleClick}>Work</HashLink>
+                <HashLink to="/contact" onClick={handleClick}>Contact</HashLink>
+
             </motion.div>
         )
     }
@@ -48,13 +44,16 @@ const Navbar = ()=>{
     return(
         <section className="section-nav-hero">
         <nav>
+        <HashLink to="/#top">
             <h1>shubham <br></br> ubarhande</h1>
+        </HashLink>
+            
 
             <div className="nav-left-container">
-                <div className="nav-cta">
-                    <p>Talk to me</p>
-                    <img src="/images/link.png" alt="link"></img>
-                </div>
+                    <div onClick={()=> navigate("/contact")} className="nav-cta">
+                        <p>Talk to me</p>
+                        <img src="/images/link.png" alt="link"></img>
+                    </div>
 
                 <img src={isOpen ? "/images/close.png" : "/images/menu.png"} onClick={()=> handleClick()} alt="menu"></img>
             </div>

@@ -6,7 +6,7 @@ import "./about.css";
 
 const About = ()=>{
     return(
-        <section className="section-about">
+        <section className="section-about" id="about">
             <motion.div 
             initial={{translateX: "-150px", opacity: 0}}
             whileInView={{translateX: 0, opacity: 1}}

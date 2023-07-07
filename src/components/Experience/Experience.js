@@ -1,12 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+import { HashLink } from "react-router-hash-link";
+
 import "./experience.css";
+import data from "../../data/Work.json";
 
 
 const Experience = ()=>{
+
+    const mapProjects = (i)=>{
+        return(
+            <HashLink key={i.id} to={"/work?id=" + i.id + "/#navbar"} className="project">
+                <h1>{i.title}</h1>
+                <img src="/images/link.png" alt="link"></img>
+            </HashLink>
+        )
+    }
+
     return(
-        <section className="section-exp">
+        <section className="section-exp" id="exp">
             <div className="exp-top">
             <motion.div 
             initial={{translateX: "-150px", opacity: 0}}
@@ -47,14 +60,7 @@ const Experience = ()=>{
             viewport={{ once: true }}
             className="exp-bottom">
                 <div className="exp-projects">
-                    <div className="project">
-                        <h1>Share Pro</h1>
-                        <img src="/images/link.png" alt="link"></img>
-                    </div>
-                    <div className="project">
-                        <h1>Ninja Store</h1>
-                        <img src="/images/link.png" alt="link"></img>
-                    </div>
+                    {data.map(i => mapProjects(i))}
                 </div>
             </motion.div>
         </section>
