@@ -28,9 +28,13 @@
     place-items: center;
     border: 1px solid var(--clr-white);
     border-radius: 100%;
+    transition: transform .3s ease-in-out;
 }
 .footer-circle p{
     transform: rotate(-29.5deg);
+}
+.footer-circle:hover {
+    transform: rotate(29.5deg);
 }
 .footer-middle {
     display: flex;

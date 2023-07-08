@@ -29,7 +29,7 @@ const ContactForm = ()=>{
 
                     <div className="contact-details">
                         <div className="details-tab">
-                            <p>Conatact</p>
+                            <p>Contact</p>
                             <p>shubham.ubarhande69@gmail.com</p>
                         </div>
 
